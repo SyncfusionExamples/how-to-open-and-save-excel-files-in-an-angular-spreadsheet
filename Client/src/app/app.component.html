@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <!-- Syncfusion service URL's to use in openUrl and saveURL AP's
+  https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open
+  https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save -->
+  <button class="e-btn" style="margin: 5px;" (click)="btnClick()">Save</button>
+  <ejs-spreadsheet #spreadsheet (created)="onCreate()"
+      openUrl="https://localhost:7021/api/sample/open"
+      saveUrl="https://localhost:7021/api/sample/save"
+      (beforeSave)="onSave($event)">
+    <e-sheets>
+      <e-sheet>
+        <e-ranges>
+            <e-range [dataSource]="data"></e-range>
+        </e-ranges>
+        <e-columns>
+            <e-column [width]=100></e-column>
+            <e-column [width]=130></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=120></e-column>
+            <e-column [width]=120></e-column>
+        </e-columns>
+      </e-sheet>
+    </e-sheets>
+  </ejs-spreadsheet>
+</div>
+
